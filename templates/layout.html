@@ -2,18 +2,55 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>{{ title }}</title>
-<link rel="stylesheet" href="../static/css/style.css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+<title>{{ title }}</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+<link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
-	<div class="header-block">
-    @ Django Sample
-  </div>
-  <div class="menu-block">
-    <a href="/django/books/">Book</a> /
-    <a href="/django/settings/">Settings</a>
-  </div>
+
+
+
+    <div class="container d-flex align-items-center justify-content-between">
+
+
+           <nav class="navbar nav-fill  navbar-expand-md navbar-dark  bg-primary sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">北海道大学歯学部同窓会</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#main_nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="main_nav">
+        <ul class="navbar-nav  ">
+          <li class="nav-item"><a href="aisatsu.html" class="nav-link">会長挨拶</a></li>
+          <li class="nav-item"><a href="yakuin.html" class="nav-link ">役員・部員・評議員</a></li>
+          <li class="nav-item"><a href="sibu.html" class="nav-link">支部</a></li>
+          <li class="nav-item"><a href="kakuki.html" class="nav-link">各期</a></li>
+          <li class="nav-item"><a href="https://almni.den.hokudai.ac.jp/Academic/index.html" class="nav-link">学術部お知らせ</a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">会員サービス</a>
+            <ul class="dropdown-menu">
+              <li><a href="keicho.html" class="dropdown-item">・慶弔について</a></li>
+              <li><a href="jyusho.html" class="dropdown-item">・住所変更について</a></li>
+              <li><a href="kaihi.html" class="dropdown-item">・会費について</a></li>
+              <li><a href="https://almni.den.hokudai.ac.jp/private/index.html" class="dropdown-item">・会員限定ページ</a></li>
+            </ul>
+          </li>
+           <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">リンク</a>
+            <ul class="dropdown-menu">
+              <li><a href="https://www.den.hokudai.ac.jp/" class="dropdown-item">北海道大学歯学部</a></li>
+              <li><a href="https://www.huhp.hokudai.ac.jp/" class="dropdown-item">北海道大学病院</a></li>
+              <li><a href="https://www.hokudai.ac.jp/" class="dropdown-item">北海道大学</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav><!-- .navbar -->
+    </div>
+
   <div class="content-block">
   <h1>{{ title }}</h1>
    {% if success_message %}
@@ -27,6 +64,8 @@
     {% endif %}
   {% block content %}{% endblock %}
   </div>
+ <script src="../static/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
 
